@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx skills *)",
+      "Bash(php --version)",
+      "Bash(composer --version)",
+      "Bash(npm --version)",
+      "Bash(npm create *)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(where claude *)",
+      "Read(//c/Users/HP/AppData/Roaming/**)",
+      "Read(//c/Users/HP/AppData/Local/**)",
+      "PowerShell(Get-ChildItem \"$env:LOCALAPPDATA\\\\AnthropicClaude\" -ErrorAction SilentlyContinue | Select-Object Name; Get-ChildItem \"$env:APPDATA\\\\npm\" -ErrorAction SilentlyContinue | Select-Object Name; \\(Get-Command claude -ErrorAction SilentlyContinue\\).Source)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); mcps=d.get\\('mcpServers',{}\\); print\\(json.dumps\\(list\\(mcps.keys\\(\\)\\), indent=2\\)\\)\")",
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); s=d.get\\('mcpServers',{}\\).get\\('supabase',{}\\); print\\(json.dumps\\(s, indent=2\\)\\)\")",
+      "WebFetch(domain:api.supabase.com)",
+      "Bash(curl -s -H \"Authorization: Bearer sbp_d3b1ca1cb26fce510708ea451a136390c6861202\" \"https://api.supabase.com/v1/projects/pjtfcdkpbrsglisehbja\")",
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('region:', d.get\\('region'\\)\\); print\\('db_host:', d.get\\('db_host'\\)\\); print\\('status:', d.get\\('status'\\)\\)\")",
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\({k:v for k,v in d.items\\(\\) if 'db' in k.lower\\(\\) or 'host' in k.lower\\(\\) or 'pool' in k.lower\\(\\) or 'connect' in k.lower\\(\\)}, indent=2\\)\\)\")",
+      "Bash(curl -s -H \"Authorization: Bearer sbp_d3b1ca1cb26fce510708ea451a136390c6861202\" \"https://api.supabase.com/v1/projects/pjtfcdkpbrsglisehbja/database/postgres-config\")",
+      "Bash(curl -s -H \"Authorization: Bearer sbp_d3b1ca1cb26fce510708ea451a136390c6861202\" \"https://api.supabase.com/v1/projects\")",
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); p=[x for x in d if x.get\\('id'\\)=='pjtfcdkpbrsglisehbja']; print\\(json.dumps\\(p, indent=2\\)\\)\")",
+      "Bash(nslookup db.pjtfcdkpbrsglisehbja.supabase.co)",
+      "Bash(nslookup aws-0-eu-west-1.pooler.supabase.com)",
+      "Bash(curl -sv \"http://localhost:5000/api/jobs?limit=3\")",
+      "Bash(curl -s -X POST https://api.supabase.com/v1/projects/pjtfcdkpbrsglisehbja/database/query -H 'Authorization: Bearer sbp_d3b1ca1cb26fce510708ea451a136390c6861202' -H 'Content-Type: application/json' -d '{\"query\":\"SELECT COUNT\\(*\\) as total FROM jobs j\"}')",
+      "Bash(curl -s -X POST https://api.supabase.com/v1/projects/pjtfcdkpbrsglisehbja/database/query -H 'Authorization: Bearer sbp_d3b1ca1cb26fce510708ea451a136390c6861202' -H 'Content-Type: application/json' -d '{\"query\":\"SELECT column_name, data_type FROM information_schema.columns WHERE table_name = '\\\\''jobs'\\\\'' ORDER BY ordinal_position\"}')",
+      "Bash(curl -s \"http://localhost:5000/api/jobs?limit=3\")",
+      "Bash(curl -s \"http://localhost:5000/api/health\")",
+      "Bash(curl -s -X POST http://localhost:5000/api/auth/register -H 'Content-Type: application/json' -d '{\"name\":\"Test User\",\"email\":\"test@example.com\",\"password\":\"test123\",\"role\":\"job_seeker\"}')",
+      "Bash(curl -s -X POST http://localhost:5000/api/auth/login -H 'Content-Type: application/json' -d '{\"email\":\"test@example.com\",\"password\":\"test123\"}')",
+      "Bash(python seed.py)",
+      "Bash(pip install *)"
+    ]
+  }
+}
